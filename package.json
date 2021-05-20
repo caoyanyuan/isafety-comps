@@ -1,6 +1,6 @@
 {
   "name": "isafety-comps",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "isafety portal's common comps",
   "main": "lib/index.js",
   "scripts": {
