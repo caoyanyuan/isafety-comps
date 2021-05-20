@@ -2355,13 +2355,13 @@
               if (curProxy == self.videos[i]['rtspAddress']) {
                 switch (message) {
                   case self.globalScmsVideoStatus.STATUS_REQUESTING_VIDEO:
-                    self.videos[i]["error"] = self.$t('请求数据') + self.videos[i]['camera_id'];
+                    self.videos[i]["error"] = self.$t('bayonetMonitoring.requestData') + self.videos[i]['camera_id'];
                     break;
                   case self.globalScmsVideoStatus.STATUS_REQUESTING_VIDEO_FAILED:
-                    self.videos[i]["error"] = self.$t('请求失败');
+                    self.videos[i]["error"] = self.$t('bayonetMonitoring.requestFails');
                     break;
                   case self.globalScmsVideoStatus.STATUS_INTERRUPT_TRYING_TO_RECONNECT_VIDEO:
-                    self.videos[i]["error"] = self.$t('尝试重连')
+                    self.videos[i]["error"] = self.$t('bayonetMonitoring.reconnection')
                     break;
                   case self.globalScmsVideoStatus.STATUS_RECONNECT_VIDEO:
                     self.reconnectWs(i);
@@ -2370,7 +2370,7 @@
                     self.videos[i]["talkingSupport"] = true;
                     break;
                   default:
-                    self.videos[i]["error"] = self.$t('接收数据') + " " + message.toFixed(2) + "kbps";
+                    self.videos[i]["error"] = self.$t('bayonetMonitoring.takeData') + " " + message.toFixed(2) + "kbps";
                     break;
                 }
               }
@@ -3248,7 +3248,7 @@
               if (curProxy == self.replayVideos[i]['rtspAddress'].substring(0, currentProxy.indexOf("time"))) {
                 switch (err) {
                   case self.globalScmsVideoStatus.STATUS_REQUESTING_VIDEO:
-                    self.replayVideos[i]["error"] = self.$t('请求数据') + self.videos[i]['camera_id'];
+                    self.replayVideos[i]["error"] = self.$t('请求数据123123') + self.videos[i]['camera_id'];
                     break;
                   case self.globalScmsVideoStatus.STATUS_REQUESTING_VIDEO_FAILED:
                     self.replayVideos[i]["error"] = self.$t('请求失败');
@@ -3260,7 +3260,7 @@
                     self.reconnectWs(i);
                     break;
                   default:
-                    self.replayVideos[i]["error"] = self.$t('接收数据') + " " + err.toFixed(2) + "kbps";
+                    self.replayVideos[i]["error"] = self.$t('接收数据123123') + " " + err.toFixed(2) + "kbps";
                     break;
                 }
               }
